@@ -10,8 +10,9 @@
     </div>
   </aside>
   <div>
-    <ul>
-      <li class="nav-item"><a href="#" class="nav-link">Tasklist</a></li>
+    <ul class>
+      <li class="nav-item"><a href="<%= user_path(@user) %>" class="nav-link <%= 'active' if current_page?(user_path(@user)) %>">Tasklists  <span class="badge badge-secondary"><%= @count_tasklists %></span></a></li>
     </ul>
+    <%= render 'tasklists/tasklists', tasklists: @tasklists %>
   </div>
 </div>
